@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ChaseCraft Game Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #000;
+      font-family: 'Courier New', monospace;
+    }
+
+    .matrix {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      animation: matrix-move 1s infinite linear;
+      background-color: #000; /* Change the background color to match the body background */
+    }
+
+    .matrix-text {
+      color: #00ff00; /* Green color for letters */
+      font-size: 20px;
+    }
+
+    @keyframes matrix-move {
+      0% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(-100px);
+      }
+    }
+
+    .portfolio {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+    }
+
+    .portfolio-item-container {
+      margin-bottom: 20px;
+    }
+
+    .portfolio-item {
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid gray;
+      border-radius: 5px;
+    }
+
+    .portfolio-item h3 {
+      font-size: 24px;
+    }
+
+    .portfolio-item p {
+      color: gray;
+    }
+
+    @media (max-width: 250px) {
+      /* Adjust styles for smaller screens (e.g., mobile devices) */
+      .portfolio {
+        max-width: 90%;
+      }
+
+      .portfolio-item-container {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="matrix">
+    <div class="matrix-text">
+      ChaseCraft Game Portfolio
+    </div>
+  </div>
+
+  <div class="portfolio">
+    <h1>ChaseCraft Game Portfolio</h1>
+
+    <div class="portfolio-item-container">
+      <div class="portfolio-item">
+        <h3>Game 1: ChaseCraft</h3>
+        <p>ChaseCraft is a 3D platformer game where the player must chase down and defeat the evil Dr. Eggman.</p>
+      </div>
+    </div>
+
+    <div class="portfolio-item-container">
+      <div class="portfolio-item">
+        <h3>Game 2: ChaseCraft 2</h3>
+        <p>ChaseCraft 2 is the sequel to the original ChaseCraft game. It features new levels, enemies, and bosses.</p>
+      </div>
+    </div>
+
+    <div class "portfolio-item-container">
+      <div class="portfolio-item">
+        <h3>Game 3: ChaseCraft 3</h3>
+        <p>ChaseCraft 3 is currently in development. It will be the biggest and most ambitious ChaseCraft game yet.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Create a list of raindrops
+    const raindrops = [];
+
+    // Create a function to create a new raindrop
+    function createRaindrop() {
+      // Create a new DOM element
+      const raindrop = document.createElement('div');
+
+      // Set the raindrop's CSS properties
+      raindrop.style.position = 'absolute';
+      raindrop.style.left = Math.random() * window.innerWidth + 'px';
+      raindrop.style.top = '0';
+      raindrop.style.width = '10px';
+      raindrop.style.height = '10px';
+      raindrop.style.color = 'green'; // Text color
+      raindrop.style.fontWeight = 'bold';
+      raindrop.textContent = String.fromCharCode(65 + Math.floor(Math.random() * 26)); // Random letter (A-Z)
+      document.body.appendChild(raindrop);
+      raindrops.push(raindrop);
+    }
+
+    // Create a function to update the position of a raindrop
+    function updateRaindropPosition(raindrop) {
+      const screenHeight = window.innerHeight;
+      raindrop.style.top = parseInt(raindrop.style.top) + 1 + 'px';
+
+      if (parseInt(raindrop.style.top) > screenHeight) {
+        // Reset raindrop at the top
+        raindrop.style.top = '0';
+        raindrop.textContent = String.fromCharCode(65 + Math.floor(Math.random() * 26));
+      }
+    }
+
+    // Create a function to update the position of all raindrops
+    function updateRaindrops() {
+      for (const raindrop of raindrops) {
+        updateRaindropPosition(raindrop);
+      }
+    }
+
+    // Create raindrops at intervals
+    setInterval(createRaindrop, 100);
+
+    // Update raindrop positions at intervals
+    setInterval(updateRaindrops, 30);
+  </script>
+</body>
+</html>
