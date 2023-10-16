@@ -68,4 +68,68 @@
 
   <script src="script.js"></script> <!-- Link to the JavaScript file (script.js) -->
 </body>
+<head>
+  <title>Code Unleashed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: black;
+    }
+
+    .header {
+      background: url('matrix-background.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: green;
+      font-size: 4rem;
+    }
+
+    .portfolio {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .portfolio-item {
+      width: 300px;
+      height: 300px;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle, rgba(255, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .portfolio-item:hover {
+      animation: pulse 0.5s infinite alternate;
+    }
+
+    @keyframes pulse {
+      to {
+        transform: scale(1.1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    Code Unleashed
+  </div>
+
+  <div class="portfolio">
+    <div class="portfolio-item">Art</div>
+    <div class="portfolio-item">Games</div>
+    <div class="portfolio-item">Music</div>
+    <div class="portfolio-item">AI</div>
+    <div class="portfolio-item">VR</div>
+  </div>
+</body>
 </html>
