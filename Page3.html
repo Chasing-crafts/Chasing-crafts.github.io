@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Code Power Showcase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #000;
+      font-family: 'Courier New', monospace;
+      color: white;
+      overflow: hidden;
+    }
+
+    /* Matrix-style background */
+    .matrix-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      opacity: 0.8;
+      animation: matrix-move 3s infinite linear;
+      z-index: -1;
+    }
+
+    .matrix-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 32px;
+    }
+
+    /* Parallax Scrolling */
+    .parallax {
+      position: relative;
+      height: 600px;
+      overflow: hidden;
+    }
+
+    .parallax-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      transform: translateZ(0) scale(1.1);
+      z-index: -1;
+    }
+
+    .parallax-content {
+      text-align: center;
+      padding: 100px 0;
+      color: white;
+    }
+
+    /* Navigation Menu */
+    .menu {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 2;
+    }
+
+    .menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .menu li {
+      margin: 10px 0;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      display: block;
+    }
+
+    .menu a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="matrix-container">
+    <div class="matrix-text">
+      Code Power Showcase
+    </div>
+  </div>
+
+  <div class="menu">
+    <ul>
+      <li><a href="#interactive-animations">Interactive Animations</a></li>
+      <li><a href="#3d-visualizations">3D Visualizations</a></li>
+      <li><a href="#dynamic-galleries">Dynamic Galleries</a></li>
+      <li><a href="#creative-projects">Creative Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#blog">Blog</a></li>
+    </ul>
+  </div>
+
+  <div class="parallax">
+    <div class="parallax-layer" style="background-image: url('cyberpunk-background.jpg');"></div>
+    <div class="parallax-content">
+      <h2>Parallax Scrolling</h2>
+      <p>Enjoy the illusion of depth as you scroll down this page.</p>
+    </div>
+  </div>
+
+  <div class="portfolio">
+    <h1>Portfolio</h1>
+
+    <div class="portfolio-item">
+      <h3>Interactive Animations</h3>
+      <p>Experience a world of interactive animations that respond to your touch or mouse movements.</p>
+      <div class="animated-element" style="width: 100px; height: 100px; background-color: #3498db; animation: floating 2s infinite ease-in-out;"></div>
+    </div>
+
+    <div class="portfolio-item">
+      <h3>3D Visualizations</h3>
+      <p>Explore stunning 3D visualizations and take a virtual tour of imaginative landscapes.</p>
+      <div class="animated-element" style="width: 150px; height: 150px; background-color: #e74c3c; animation: floating 3s infinite ease-in-out;"></div>
+    </div>
+
+    <div class="portfolio-item">
+      <h3>Dynamic Galleries</h3>
+      <p>Enjoy dynamic image galleries that smoothly slide and showcase your creative work.</p>
+      <div class="animated-element" style="width: 120px; height: 120px; background-color: #f1c40f; animation: floating 2.5s infinite ease-in-out;"></div>
+    </div>
+
+    <div class="portfolio-item">
+      <h3>Creative Projects</h3>
+      <p>View a variety of creative projects, including game development, art, and more.</p>
+      <div class="animated-element" style="width: 100px; height: 100px; background-color: #2ecc71; animation: floating 2.2s infinite ease-in-out;"></div>
+    </div>
+  </div>
+</body>
+</html>
+```
