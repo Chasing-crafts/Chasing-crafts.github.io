@@ -53,6 +53,8 @@
       background: rgba(0, 0, 0, 0.5);
       border: 1px solid gray;
       border-radius: 5px;
+      position: relative; /* Add this line */
+      z-index: 1; /* Add this line to ensure the portfolio items are above the raindrops */
     }
 
     .portfolio-item h3 {
@@ -93,7 +95,7 @@
     </div>
 
     <div class="portfolio-item-container">
-      <div class "portfolio-item">
+      <div class="portfolio-item">
         <h3>Game 2: ChaseCraft 2</h3>
         <p>ChaseCraft 2 is the sequel to the original ChaseCraft game. It features new levels, enemies, and bosses.</p>
       </div>
@@ -137,7 +139,7 @@
       if (parseInt(raindrop.style.top) > screenHeight) {
         // Reset raindrop at the top
         raindrop.style.top = '0';
-        raindrop.textContent = String.fromCharCode(65 + Math.floor(Math random() * 26));
+        raindrop.textContent = String.fromCharCode(65 + Math.floor(Math.random() * 26));
       }
     }
 
