@@ -1,0 +1,95 @@
+/* Additional styles for your page */
+body {
+  font-family: Arial, sans-serif;
+  background: #010a01; /* Dark green background color */
+  color: #ffffff; /* White text color */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.header {
+  background: url('matrix-background.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: green;
+  font-size: 4rem;
+}
+
+/* Styles for the navigation links */
+.nav-link {
+  position: relative;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 5px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  background-image: linear-gradient(90deg, #ff0033, #ff3366, #ff6699);
+}
+
+/* Strobing effect on hover */
+.nav-link:hover {
+  animation: strobe 0.3s infinite alternate;
+}
+
+@keyframes strobe {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Button-like styles */
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff9900, #ff33cc, #3300ff);
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s;
+}
+
+.nav-link:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Additional styles for the portfolio items */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.portfolio-item {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.portfolio-item:hover {
+  animation: pulse 0.5s infinite alternate;
+}
+
+@keyframes pulse {
+  to {
+    transform: scale(1.1);
+  }
+}
