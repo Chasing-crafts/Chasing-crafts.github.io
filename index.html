@@ -5,72 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ChaseCraft Universe Portfolio</title>
   <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file (styles.css) -->
-</head>
-<body>
-  <!-- Space-themed Background and Portfolio -->
-  <div id="space">
-    <img src="assets/IMG_6701.webp" alt="Space Background Image">
-  </div>
-<body>
-  <!-- Navigation Section -->
-  <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="page2.html">Page 2</a></li>
-    <li><a href="page3.html">Page 3</a></li>
-    <!-- Add more links for additional pages -->
-  </ul>
-</nav>
-  <!-- ... other HTML sections ... -->
-<body>
-  <!-- Space-themed Background and Portfolio -->
-  <div class="portfolio">
-    <h1>ChaseCraft Universe Portfolio</h1>
-    <!-- Game 1 Section -->
-    <div class="portfolio-item">
-      <h3>Game 1: Space Chase</h3>
-      <p>Space Chase is an intergalactic adventure where you navigate through wormholes and defeat cosmic threats.</p>
-    </div>
-<body>
-    <!-- Game 2 Section -->
-    <div class="portfolio-item">
-      <h3>Game 2: Stellar Odyssey</h3>
-      <p>Stellar Odyssey is a space exploration game with stunning visuals and an expansive galaxy to conquer.</p>
-    </div>
-<body>
-    <!-- Game 3 Section -->
-    <div class="portfolio-item">
-      <h3>Game 3: Nebula Quest</h3>
-      <p>Nebula Quest is a journey through surreal nebulae, solving mysteries and unlocking the secrets of the universe.</p>
-    </div>
-  <body>
-  <!-- Interactive Quiz Section -->
-  <div class="portfolio-item" id="quiz">
-    <h3>Game Quiz: Test Your Knowledge</h3>
-    <p>Challenge your knowledge of ChaseCraft Universe games with this interactive quiz!</p>
-    <button id="start-quiz-button">Start Quiz</button>
-    <div id="quiz-container" style="display: none;">
-      <p id="question">Question 1: What is the objective of Space Chase?</p>
-      <label>
-        <input type="radio" name="answer" value="a">a) Collecting stars
-      </label>
-      <label>
-        <input type="radio" name="answer" value="b">b) Defeating cosmic threats
-      </label>
-      <label>
-        <input type="radio" name="answer" value="c">c) Racing through space
-      </label>
-      <button id="submit-answer-button">Submit Answer</button>
-      <p id="result"></p>
-    </div>
-  </div>
-<body>
-  <script src="script.js"></script> <!-- Link to the JavaScript file (script.js) -->
-</body>
-  <title>Code Unleashed</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    <body> {
+    body {
       margin: 0;
       padding: 0;
       overflow: hidden;
@@ -100,7 +36,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: radial-gradient(circle, rgba(255, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
       color: white;
       font-size: 1.5rem;
       cursor: pointer;
@@ -110,23 +45,85 @@
       animation: pulse 0.5s infinite alternate;
     }
 
+    .game-section {
+      background-color: rgb(255, 0, 0); /* Red */
+      padding: 20px;
+      color: white;
+    }
+
+    .portfolio-item:nth-child(odd) {
+      background: rgba(0, 0, 255, 0.6); /* Blue */
+    }
+
+    .portfolio-item:nth-child(even) {
+      background: rgba(0, 255, 0, 0.6); /* Green */
+    }
+
     @keyframes pulse {
       to {
         transform: scale(1.1);
       }
     }
   </style>
+</head>
 <body>
-  <div class="header">
-    Code Unleashed
+  <div id="space">
+    <img src="assets/IMG_6701.webp" alt="Space Background Image">
   </div>
 
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="page2.html">Page 2</a></li>
+      <li><a href="page3.html">Page 3</a></li>
+      <!-- Add more links for additional pages -->
+    </ul>
+  </nav>
+
   <div class="portfolio">
-    <div class="portfolio-item">Art</div>
-    <div class="portfolio-item">Games</div>
-    <div class="portfolio-item">Music</div>
-    <div class="portfolio-item">AI</div>
-    <div class="portfolio-item">VR</div>
+    <div class="game-section" style="background-color: rgb(255, 0, 0);">
+      <h1>ChaseCraft Universe Portfolio</h1>
+    </div>
+
+    <!-- Game 1 Section -->
+    <div class="portfolio-item" style="background-color: rgba(255, 0, 0, 0.6);">
+      <h3>Game 1: Space Chase</h3>
+      <p>Space Chase is an intergalactic adventure where you navigate through wormholes and defeat cosmic threats.</p>
+    </div>
+
+    <!-- Game 2 Section -->
+    <div class="portfolio-item" style="background-color: rgba(0, 255, 0, 0.6);">
+      <h3>Game 2: Stellar Odyssey</h3>
+      <p>Stellar Odyssey is a space exploration game with stunning visuals and an expansive galaxy to conquer.</p>
+    </div>
+
+    <!-- Game 3 Section -->
+    <div class="portfolio-item" style="background-color: rgba(0, 0, 255, 0.6);">
+      <h3>Game 3: Nebula Quest</h3>
+      <p>Nebula Quest is a journey through surreal nebulae, solving mysteries and unlocking the secrets of the universe.</p>
+    </div>
+
+    <!-- Interactive Quiz Section -->
+    <div class="portfolio-item" id="quiz" style="background-color: rgba(255, 255, 0, 0.6);">
+      <h3>Game Quiz: Test Your Knowledge</h3>
+      <p>Challenge your knowledge of ChaseCraft Universe games with this interactive quiz!</p>
+      <button id="start-quiz-button">Start Quiz</button>
+      <div id="quiz-container" style="display: none;">
+        <p id="question">Question 1: What is the objective of Space Chase?</p>
+        <label>
+          <input type="radio" name="answer" value="a">a) Collecting stars
+        </label>
+        <label>
+          <input type="radio" name="answer" value="b">b) Defeating cosmic threats
+        </label>
+        <label>
+          <input type="radio" name="answer" value="c">c) Racing through space
+        </label>
+        <button id="submit-answer-button">Submit Answer</button>
+        <p id="result"></p>
+      </div>
+    </div>
   </div>
+  <script src="script.js"></script> <!-- Link to the JavaScript file (script.js) -->
 </body>
 </html>
