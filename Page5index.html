@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Matrix</title>
+  <style>
+    body {
+      background-color: #000;
+      font-family: 'Courier New', monospace;
+      color: #0F0; /* Neon green text color */
+      overflow: hidden;
+    }
+
+    .matrix {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      animation: matrix-move 1s infinite linear;
+    }
+
+    .matrix-text {
+      color: #F00; /* Neon red color for letters */
+      font-size: 20px;
+    }
+
+    @keyframes matrix-move {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-100px);
+      }
+    }
+
+    .spiral {
+      width: 200px;
+      height: 200px;
+      background-image: conic-gradient(
+        from 0deg,
+        #F00,
+        #0F0,
+        #00F,
+        #FF0,
+        #0FF,
+        #F0F
+      );
+      border: 1px solid #0F0;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      touch-action: pan-y;
+    }
+
+    .input-box {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+
+    .input-box input {
+      width: 300px;
+      padding: 5px;
+      border: none;
+      border-bottom: 2px solid #F00;
+      outline: none;
+      background: transparent;
+      color: #0F0;
+      font-family: 'Courier New', monospace;
+    }
+
+    .falling-words {
+      position: absolute;
+      animation: fall 5s linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-10vh);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="matrix">
+    <div class="matrix-text">
+      <!-- Randomly generated matrix-like text -->
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+  </div>
+
+  <div class="spiral" id="spiral"></div>
+
+  <div class="input-box">
+    <input type="text" placeholder="Type a word..." id="userWord" />
+    <button onclick="addFallingWord()">Add Falling Word</button>
+  </div>
+
+  <script>
+    // Function to add a falling word
+    function addFallingWord() {
+      const userWord = document.getElementById('userWord').value;
+      if (userWord) {
+        const wordElement = document.createElement('div');
+        wordElement.className = 'falling-words';
+        wordElement.textContent = userWord;
+        document.body.appendChild(wordElement);
+        wordElement.style.left = Math.random() * window.innerWidth + 'px';
+      }
+    }
+  </script>
+</body>
+</html>
