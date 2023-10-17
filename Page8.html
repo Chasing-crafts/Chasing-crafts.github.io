@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li> <!-- Link back to the main index -->
-      <!-- Add more links for additional pages if needed -->
-    </ul>
-  </nav>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ChaseCraft Universe Portfolio</title>
@@ -73,57 +67,16 @@
   </style>
 </head>
 <body>
-  <img src="https://raw.githubusercontent.com/Chasing-crafts/Chasing-crafts.github.io/main/assets/IMG_6701.webp" alt="Space Background Image">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li> <!-- Link back to the main index -->
+      <!-- Add more links for additional pages if needed -->
+    </ul>
+  </nav>
 
-  <style>
-    /* Styling for the navigation links */
-    .nav-link {
-      position: relative;
-      padding: 10px 20px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      margin: 5px;
-      border: 2px solid transparent;
-      border-radius: 20px;
-      transition: all 0.3s ease;
-      background-image: linear-gradient(90deg, #ff0033, #ff3366, #ff6699);
-    }
-
-    /* Strobing effect on hover */
-    .nav-link:hover {
-      animation: strobe 0.3s infinite alternate;
-    }
-
-    @keyframes strobe {
-      0% {
-        filter: hue-rotate(0deg);
-      }
-      100% {
-        filter: hue-rotate(360deg);
-      }
-    }
-
-    /* Button-like styles */
-    .nav-link::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(45deg, #ff9900, #ff33cc, #3300ff);
-      opacity: 0;
-      transform: scale(0);
-      transition: all 0.3s;
-    }
-
-    .nav-link:hover::before {
-      opacity: 1;
-      transform: scale(1);
-    }
-  </style>
+  <div class="header">
+    <img src="https://raw.githubusercontent.com/Chasing-crafts/Chasing-crafts.github.io/main/assets/IMG_6701.webp" alt="Space Background Image">
+  </div>
 
   <nav>
     <ul>
@@ -138,7 +91,7 @@
         </a>
       </li>
       <li>
-        <a href="Page3.html" class="nav-link page3-link">
+        <a href="Page3.html" class "nav-link page3-link">
           <span>Page 3</span>
         </a>
       </li>
@@ -167,7 +120,7 @@
   </nav>
 
   <div class="portfolio">
-    <div class="game-section" style="background-color: rgb(255, 0, 0);">
+    <div class="game-section">
       <h1>ChaseCraft Universe Portfolio</h1>
     </div>
 
