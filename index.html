@@ -9,8 +9,8 @@
     body {
       margin: 0;
       padding: 0;
-      overflow: hidden;
-      background-color: black;
+      background-color: #121212;
+      font-family: 'Arial', sans-serif;
     }
 
     .header {
@@ -27,36 +27,60 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      padding: 20px;
     }
 
     .portfolio-item {
       width: 300px;
       height: 300px;
-      margin: 10px;
+      margin: 20px;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
       color: white;
       font-size: 1.5rem;
-      cursor: pointer;
+      border: 2px solid #ff33cc;
+      border-radius: 10px;
+      background: linear-gradient(45deg, #ff0033, #ff3366, #ff6699);
+      transition: transform 0.2s;
     }
 
     .portfolio-item:hover {
-      animation: pulse 0.5s infinite alternate;
+      transform: scale(1.1);
     }
 
     .game-section {
-      background-color: rgb(255, 0, 0); /* Red */
+      background-color: #f53535; /* Red */
       padding: 20px;
       color: white;
     }
 
-    .portfolio-item:nth-child(odd) {
-      background: rgba(0, 0, 255, 0.6); /* Blue */
+    .game-section h1 {
+      font-size: 2rem;
     }
 
-    .portfolio-item:nth-child(even) {
-      background: rgba(0, 255, 0, 0.6); /* Green */
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .nav-link {
+      background: #ff33cc;
+      color: white;
+      font-size: 1.2rem;
+      border: 2px solid #ff0033;
+      border-radius: 10px;
+      padding: 10px 20px;
+      margin: 10px;
+      text-decoration: none;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .nav-link:hover {
+      transform: scale(1.1);
+      background-color: #ff0033;
     }
 
     @keyframes pulse {
@@ -67,150 +91,57 @@
   </style>
 </head>
 <body>
-  <img src="assets/IMG_6701.webp" alt="Space Background Image">
+  <div class="nav-buttons">
+    <a href="index.html" class="nav-link home-link">Home</a>
+    <a href="Page2.html" class="nav-link page2-link">Game Universe</a>
+    <a href="Page3.html" class="nav-link page3-link">Space Adventures</a>
+    <a href="Page2index.html" class="nav-link page4-link">Stellar Odyssey</a>
+    <a href="https://raw.githubusercontent.com/Chasing-crafts/Chasing-crafts.github.io/main/assets/Img1.jpg" class="nav-link page5-link">Intergalactic Journey</a>
+    <a href="https://raw.githubusercontent.com/Chasing-crafts/Chasing-crafts.github.io/main/assets/Img2.jpg" class="nav-link page6-link">Astro Explorations</a>
+    <a href="Page7.html" class="nav-link page7-link">Galactic Challenges</a>
+    <a href="Page8.html" class="nav-link page8-link">New Page 8</a>
+    <a href="Page9.html" class="nav-link page9-link">New Page 9</a>
+    <a href="Page10.html" class="nav-link page10-link">New Page 10</a>
+    <a href="quiz.html" class="nav-link quiz-link">Game Quiz</a>
+  </div>
 
-  <style>
-    /* Styling for the navigation links */
-    .nav-link {
-      position: relative;
-      padding: 10px 20px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      margin: 5px;
-      border: 2px solid transparent;
-      border-radius: 20px;
-      transition: all 0.3s ease;
-      background-image: linear-gradient(90deg, #ff0033, #ff3366, #ff6699);
-    }
-
-    /* Strobing effect on hover */
-    .nav-link:hover {
-      animation: strobe 0.3s infinite alternate;
-    }
-
-    @keyframes strobe {
-      0% {
-        filter: hue-rotate(0deg);
-      }
-      100% {
-        filter: hue-rotate(360deg);
-      }
-    }
-
-    /* Button-like styles */
-    .nav-link::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(45deg, #ff9900, #ff33cc, #3300ff);
-      opacity: 0;
-      transform: scale(0);
-      transition: all 0.3s;
-    }
-
-    .nav-link:hover::before {
-      opacity: 1;
-      transform: scale(1);
-    }
-  </style>
-
-  <nav>
-    <ul>
-      <li>
-        <a href="index.html" class="nav-link home-link">
-          <span>Home</span>
-        </a>
-      </li>
-      <li>
-        <a href="Page2.html" class="nav-link page2-link">
-          <span>Page 2</span>
-        </a>
-      </li>
-      <li>
-        <a href="Page3.html" class="nav-link page3-link">
-          <span>Page 3</span>
-        </a>
-      </li>
-      <li>
-        <a href="Page2index.html" class="nav-link page4-link">
-          <span>Page 4</span>
-        </a>
-      </li>
-      <li>
-        <a href="Page5index.html" class="nav-link page5-link">
-          <span>Page 5</span>
-        </a>
-      </li>
-      <li>
-        <a href="Page6.html" class="nav-link page6-link">
-          <span>Page 6</span>
-        </a>
-      </li>
-      <li>
-        <a href="Page7.html" class="nav-link page7-link">
-          <span>Page 7</span>
-        </a>
-      </li>
-       </li>
-      <li>
-        <a href="Page8.html" class="nav-link page8-link">
-          <span>Page 8</span>
-        </a>
-      </li>
-      <!-- Add more links for additional pages with different styles -->
-    </ul>
-  </nav>
+  <div class="header">
+    <img src="https://raw.githubusercontent.com/Chasing-crafts/Chasing-crafts.github.io/main/assets/IMG_6701.webp" alt="Space Background Image">
+  </div>
 
   <div class="portfolio">
-    <div class="game-section" style="background-color: rgb(255, 0, 0);">
+    <div class="game-section">
       <h1>ChaseCraft Universe Portfolio</h1>
     </div>
 
     <!-- Game 1 Section -->
-    <div class="portfolio-item" style="background-color: rgba(255, 0, 0, 0.6);">
-      <h3>Game 1: Space Chase</h3>
-      <p>Space Chase is an intergalactic adventure where you navigate through wormholes and defeat cosmic threats.</p>
+    <div class="portfolio-item" style="background-image: url('game1-bg.jpg');">
+      <h3>Space Chase</h3>
+      <p>An intergalactic adventure where you navigate through wormholes and defeat cosmic threats. Explore Now!</p>
+      <a href="space-chase.html" class="portfolio-link">Explore</a>
     </div>
 
     <!-- Game 2 Section -->
-    <div class="portfolio-item" style="background-color: rgba(0, 255, 0, 0.6);">
-      <h3>Game 2: Stellar Odyssey</h3>
-      <p>Stellar Odyssey is a space exploration game with stunning visuals and an expansive galaxy to conquer.</p>
+    <div class="portfolio-item" style="background-image: url('game2-bg.jpg');">
+      <h3>Stellar Odyssey</h3>
+      <p>Embark on a space exploration journey with stunning visuals and an expansive galaxy to conquer. Discover More!</p>
+      <a href="stellar-odyssey.html" class="portfolio-link">Discover</a>
     </div>
 
     <!-- Game 3 Section -->
-    <div class="portfolio-item" style="background-color: rgba(0, 0, 255, 0.6);">
-      <h3>Game 3: Nebula Quest</h3>
-      <p>Nebula Quest is a journey through surreal nebulae, solving mysteries and unlocking the secrets of the universe.</p>
+    <div class "portfolio-item" style="background-image: url('game3-bg.jpg');">
+      <h3>Nebula Quest</h3>
+      <p>Join the journey through surreal nebulae, solve mysteries, and unlock the secrets of the universe. Start Quest!</p>
+      <a href="nebula-quest.html" class="portfolio-link">Start Quest</a>
     </div>
 
     <!-- Interactive Quiz Section -->
-    <div class="portfolio-item" id="quiz" style="background-color: rgba(255, 255, 0, 0.6);">
+    <div class="portfolio-item" style="background-image: url('quiz-bg.jpg');">
       <h3>Game Quiz: Test Your Knowledge</h3>
-      <p>Challenge your knowledge of ChaseCraft Universe games with this interactive quiz!</p>
-      <button id="start-quiz-button">Start Quiz</button>
-      <div id="quiz-container" style="display: none;">
-        <p id="question">Question 1: What is the objective of Space Chase?</p>
-        <label>
-          <input type="radio" name="answer" value="a">a) Collecting stars
-        </label>
-        <label>
-          <input type="radio" name="answer" value="b">b) Defeating cosmic threats
-        </label>
-        <label>
-          <input type="radio" name="answer" value="c">c) Racing through space
-        </label>
-        <button id="submit-answer-button">Submit Answer</button>
-        <p id="result"></p>
-      </div>
+      <p>Challenge your knowledge of ChaseCraft Universe games with this interactive quiz. Test Your Skills!</p>
+      <a href="quiz.html" class="portfolio-link">Start Quiz</a>
     </div>
   </div>
-  <script src="script1.js"></script> <!-- Link to the JavaScript file (script1.js) -->
 </body>
 </html>
 ```
