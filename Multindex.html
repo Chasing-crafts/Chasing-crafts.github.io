@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive HTML5 Project</title>
     <style>
+        /* Create a fancy animated background */
+        body {
+            background: linear-gradient(135deg, #3494E6, #EC6EAD);
+            background-size: 200% 200%;
+            animation: gradient 10s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
         /* Add CSS animations */
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {
@@ -83,8 +102,17 @@
     <div id="animated-links">
         <h2>Animated Page Links</h2>
         <ul>
-            <li><a href="index.html" class="animated">Link 1</a></li>
-            <li><a href="link2.html">Link 2</a></li>
+            <li><a href="link1.html" class="animated">Link 1</a></li>
+            <li><a href="link2.html" class="animated">Link 2</a></li>
+            <li><a href="link3.html" class="animated">Link 3</a></li>
+            <li><a href="link4.html" class="animated">Link 4</a></li>
+            <li><a href="link5.html" class="animated">Link 5</a></li>
+            <li><a href="link6.html" class="animated">Link 6</a></li>
+            <li><a href="link7.html" class="animated">Link 7</a></li>
+            <li><a href="link8.html" class="animated">Link 8</a></li>
+            <li><a href="link9.html" class="animated">Link 9</a></li>
+            <li><a href="link10.html" class="animated">Link 10</a></li>
+            <li><a href="link11.html" class="animated">Link 11</a></li>
             <!-- Add more animated page links here -->
         </ul>
     </div>
