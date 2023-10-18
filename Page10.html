@@ -91,96 +91,7 @@
     </div>
     <canvas id="canvas" class="table table--canvas" tabindex="0"></canvas>
     <script>
-        // Paste your JavaScript code here
-      <script>
-    // Paste your JavaScript code here
-    var board = document.getElementById("canvas"),
-        boardContext = board.getContext('2d'),
-        boardWidth = 770,
-        boardHeight = 520,
-        boardCenterX = boardWidth / 2,
-        boardCenterY = boardHeight / 2,
-        controllers = [],
-        goal = document.getElementsByClassName('table__goal-crease'),
-        goalHeight = goal[0].clientHeight,
-        goalPosTop = (boardHeight - goalHeight) / 2,
-        score = [];
-
-    // Set width & height for canvas
-    board.width = boardWidth;
-    board.height = boardHeight;
-
-    // Set focus to canvas so keyboard events work
-    board.focus();
-
-    function Disc() {
-        this.startingPosX = boardCenterX;
-        this.startingPosY = boardCenterY;
-        this.x = this.startingPosX;
-        this.y = this.startingPosY;
-        this.radius = 34;
-        this.mass = 15;
-        this.velocityX = 0;
-        this.velocityY = 0;
-        this.maxSpeed = 10;
-        this.frictionX = 0.997;
-        this.frictionY = 0.997;
-        this.acceleration = 1;
-        this.color = '#000000';
-
-        this.keepControllerInBoard = function () {
-            if (this.x > (boardWidth - this.radius) || this.x < this.radius) {
-                if (this.x < this.radius) {
-                    this.velocityX = 2;
-                } else {
-                    this.velocityX = -2;
-                }
-            }
-
-            if (this.y > (boardHeight - this.radius) || this.y < this.radius) {
-                if (this.y < this.radius) {
-                    this.velocityY = 2;
-                } else {
-                    this.velocityY = -2;
-                }
-            };
-        }
-    }
-
-    // Multi-touch support for mobile devices
-    var player = document.getElementById('canvas'); // Replace with your player's HTML element
-
-    var touchStartX, touchStartY;
-    var touchEndX, touchEndY;
-
-    player.addEventListener('touchstart', function (e) {
-        // Handle touch start event
-        e.preventDefault(); // Prevent default touch behavior
-        var touch = e.touches[0];
-        touchStartX = touch.clientX;
-        touchStartY = touch.clientY;
-    });
-
-    player.addEventListener('touchmove', function (e) {
-        // Handle touch move event
-        e.preventDefault(); // Prevent default touch behavior
-        var touch = e.touches[0];
-        touchEndX = touch.clientX;
-        touchEndY = touch.clientY;
-
-        // Calculate the player's movement based on touch
-        var deltaX = touchEndX - touchStartX;
-        var deltaY = touchEndY - touchStartY;
-
-        // Add code to update player position as the touch moves (use deltaX and deltaY)
-        // You'll need to adjust player movement according to your game's logic
-        // For example: player.x += deltaX; player.y += deltaY;
-
-        // Update touch start position
-        touchStartX = touchEndX;
-        touchStartY = touchEndY;
-    });
-</script>
+        // Your JavaScript code here
         var board = document.getElementById("canvas"),
             boardContext = board.getContext('2d'),
             boardWidth = 770,
@@ -234,11 +145,40 @@
             };
         }
 
-        // Store controllers
-        controllers.push(controller, controllerTwo);
+        // Multi-touch support for mobile devices
+        var player = document.getElementById('canvas'); // Replace with your player's HTML element
 
-        // Startgame
-updateGame();
+        var touchStartX, touchStartY;
+        var touchEndX, touchEndY;
+
+        player.addEventListener('touchstart', function (e) {
+            // Handle touch start event
+            e.preventDefault(); // Prevent default touch behavior
+            var touch = e.touches[0];
+            touchStartX = touch.clientX;
+            touchStartY = touch.clientY;
+        });
+
+        player.addEventListener('touchmove', function (e) {
+            // Handle touch move event
+            e.preventDefault(); // Prevent default touch behavior
+            var touch = e.touches[0];
+            touchEndX = touch.clientX;
+            touchEndY = touch.clientY;
+
+            // Calculate the player's movement based on touch
+            var deltaX = touchEndX - touchStartX;
+            var deltaY = touchEndY - touchStartY;
+
+            // Add code to update player position as the touch moves (use deltaX and deltaY)
+            // You'll need to adjust player movement according to your game's logic
+            // For example: player.x += deltaX; player.y += deltaY;
+
+            // Update touch start position
+            touchStartX = touchEndX;
+            touchStartY = touchEndY;
+        });
+    </script>
 </body>
 </html>
 ```
