@@ -136,6 +136,205 @@
             color: #0056b3;
             transform: scale(1.1);
         }
+
+        /* Additional navigation buttons styles */
+        .nav-buttons {
+            margin-top: 20px;
+        }
+
+        .nav-link {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007BFF;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Chase's Interactive World</h1>
+
+    <div id="interactive-content">
+        <!-- SVG animation -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+            <circle cx="50" cy="50" r="40" fill="#007BFF" class="animated" id="animatedCircle" onclick="generateRandomTone()"></circle>
+        </svg>
+    </div>
+
+    <!-- Reference for pasting animated page links -->
+    <div id="animated-links">
+        <h2>Animated Page Links</h2>
+        <ul>
+            <li><a href="link1.html" class="animated">Link 1</a></li>
+            <li><a href="link2.html" class="animated">Link 2</a></li>
+            <li><a href="link3.html" class="animated">Link 3</a></li>
+            <li><a href="link4.html" class="animated">Link 4</a></li>
+            <li><a href="link5.html" class="animated">Link 5</a></li>
+            <li<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive HTML5 Project</title>
+    <style>
+        /* Create a fancy animated background */
+        body {
+            background: linear-gradient(135deg, #3494E6, #EC6EAD);
+            background-size: 200% 200%;
+            animation: gradient 10s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Add CSS animations */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Style for animated elements */
+        .animated {
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+
+        /* Style the page */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #interactive-content {
+            margin-top: 20px;
+        }
+
+        #animated-links {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        #animated-links h2 {
+            color: #333;
+        }
+
+        #animated-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #animated-links li {
+            margin-bottom: 10px;
+        }
+
+        /* Unique styles for each link */
+        #animated-links a:nth-child(1) {
+            color: #E74C3C;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #animated-links a:nth-child(2) {
+            color: #3498DB;
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        #animated-links a:nth-child(3) {
+            color: #2ECC71;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        #animated-links a:nth-child(4) {
+            color: #E67E22;
+            font-family: 'Tahoma', sans-serif;
+        }
+
+        #animated-links a:nth-child(5) {
+            color: #9B59B6;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+
+        #animated-links a:nth-child(6) {
+            color: #F1C40F;
+            font-family: 'Georgia', serif;
+        }
+
+        #animated-links a:nth-child(7) {
+            color: #16A085;
+            font-family: 'Times New Roman', serif;
+        }
+
+        #animated-links a:nth-child(8) {
+            color: #D35400;
+            font-family: 'Palatino Linotype', serif;
+        }
+
+        #animated-links a:nth-child(9) {
+            color: #8E44AD;
+            font-family: 'Lucida Console', monospace;
+        }
+
+        #animated-links a:nth-child(10) {
+            color: #27AE60;
+            font-family: 'Courier New', monospace;
+        }
+
+        #animated-links a:nth-child(11) {
+            color: #A569BD;
+            font-family: 'Consolas', monospace;
+        }
+
+        /* Hover effect */
+        #animated-links a:hover {
+            color: #0056b3;
+            transform: scale(1.1);
+        }
+
+        /* Additional navigation buttons styles */
+        .nav-buttons {
+            margin-top: 20px;
+        }
+
+        .nav-link {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007BFF;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -167,6 +366,22 @@
         </ul>
     </div>
 
+    <!-- Additional navigation buttons -->
+    <div class="nav-buttons">
+        <a href="index.html" class="nav-link home-link matrix-link">Home</a>
+        <a href="Page2.html" class="nav-link page2-link rgb-link">Game Universe</a>
+        <a href="Page3.html" class="nav-link page3-link neon-link">Space Adventures</a>
+        <a href="Page4.html" class="nav-link page4-link cyberpunk-link">Stellar Odyssey</a>
+        <a href="Page5.html" class="nav-link page5-link timetravel-link">Intergalactic Journey</a>
+        <a href="Page6.html" class="nav-link page6-link sinister-link">Astro Explorations</a>
+        <a href="Page7.html" class="nav-link page7-link">Galactic Challenges</a>
+        <a href="Page8.html" class="nav-link page8-link">New Page 8</a>
+        <a href="Page9.html" class="nav-link page9-link">New Page 9</a>
+        <a href="Page10.html" class="nav-link page10-link">New Page 10</a>
+        <a href="Home-index.html" class="nav-link Home-index-link">Game Quiz</a>
+        <a href="Multindex.html" class="nav-link page11-link">Air Game</a>
+    </div>
+
     <script>
         // JavaScript for generating random tones
         function generateRandomTone() {
@@ -181,3 +396,4 @@
     </script>
 </body>
 </html>
+```
