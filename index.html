@@ -6,28 +6,43 @@
   <title>ChaseCraft Universe Portfolio</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    .nav-link.page2-link {
+    /* Define unique styles for each link */
+    .nav-link {
       background-color: #FF0033;
       color: #FFFFFF;
-      /* Add unique styles and effects here */
+      transition: transform 0.5s;
+    }
+
+    .nav-link.page2-link {
+      /* Add unique styles and effects for Game Universe link here */
     }
 
     .nav-link.page3-link {
-      background-color: #6B0DFF; /* Dark purple */
-      color: #00FF00; /* Cybernetic green */
-      /* Add unique styles and effects here */
+      /* Add unique styles and effects for Space Adventures link here */
     }
 
     .nav-link.page4-link {
-      background-color: #3D0DFF; /* Darker purple */
-      color: #FF00FF; /* Cybernetic pink */
-      /* Add unique styles and effects here */
+      /* Add unique styles and effects for Stellar Odyssey link here */
     }
 
     .nav-link.page5-link {
-      background-color: #8A0DFF; /* Darkest purple */
-      color: #FFFF00; /* Cybernetic yellow */
-      /* Add unique styles and effects here */
+      /* Add unique styles and effects for Intergalactic Journey link here */
+    }
+
+    /* Define styles for the dice animation */
+    .dice {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      font-size: 24px;
+      line-height: 50px;
+      border-radius: 50%;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: transform 0.5s;
     }
   </style>
 </head>
@@ -36,20 +51,54 @@
     <a href="index.html" class="nav-link home-link">Home</a>
     <a href="Page2.html" class="nav-link page2-link">Game Universe</a>
     <a href="Page3.html" class="nav-link page3-link">Space Adventures</a>
-    <a href="Page2index.html" class="nav-link page4-link">Stellar Odyssey</a>
+    <a href="Page2index.html" class "nav-link page4-link">Stellar Odyssey</a>
     <a href="https://raw.githubusercontent.com/Chasing-crafts/Chasing-crafts.github.io/main/assets/Img1.jpg" class="nav-link page5-link">Intergalactic Journey</a>
   </div>
 
-  <div class "header">
+  <div class="header">
     <img src="your-background-image.jpg" alt="Space Background Image">
   </div>
 
   <div class="portfolio">
     <!-- Add your portfolio items and content here -->
   </div>
+
+  <div class="dice" id="dice">Roll Dice</div>
+
+  <script>
+    // JavaScript for animated transitions
+    const navLinks = document.querySelectorAll('.nav-link');
+    const dice = document.getElementById('dice');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent the default link behavior
+        // Add animation or effect here
+        link.style.transform = 'rotate(360deg)';
+        setTimeout(() => {
+          window.location.href = link.getAttribute('href');
+        }, 1000); // Adjust the delay (in milliseconds) as needed
+      });
+    });
+
+    // JavaScript for rolling dice animation
+    dice.addEventListener('click', () => {
+      dice.style.transform = 'rotate(3600deg)';
+      setTimeout(() => {
+        // Redirect to a page with the dice result (e.g., a game page)
+        window.location.href = 'game.html'; // Replace with the appropriate URL
+      }, 1500); // Adjust the delay (in milliseconds) as needed
+    });
+  </script>
 </body>
 </html>
+<div class "header">
+    <img src="your-background-image.jpg" alt="Space Background Image">
+  </div>
 
+  <div class="portfolio">
+    <!-- Add your portfolio items and content here -->
+  </div>
 <!-- Continue from the previous code... -->
 <a href="https://raw.githubusercontent.com/Chasing-crafts/Chasing-crafts.github.io/main/assets/Img2.jpg" class="nav-link page6-link">Astro Explorations</a>
 <a href="Page7.html" class="nav-link page7-link">Galactic Challenges</a>
