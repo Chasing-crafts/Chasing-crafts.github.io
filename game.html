@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Hockey Game</title>
+
+    <!-- Include the CSS styles -->
+    <style>
+        /* Colors and styling (add the provided CSS here) */
+        @red: fade(#bb0422, 25%);
+        @blue: fade(#304f86, 25%);
+        @black: #2e2e2e;
+        @grey: #F1F0F4;
+        @grey-dark: #7A7A7A;
+        @ice: #FFF;
+        
+        @table-width: 800px;
+        @table-height: 550px;
+        @table-border: 15px;
+        @table-border-2x: @table-border * 2;
+        
+        @line-width: 5px;
+        @blue-line-pos: 37%;
+        @circle-center-size: 140px;
+        @goal-size: 190px;
+        
+        @table-faceoff-size: 80px;
+        @table-faceoff-pos: 20%;
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: @grey;
+            font-family: helvetica;
+        }
+        
+        a {
+            color: @grey-dark;
+            text-decoration: none;
+            transition: .3s opacity ease-out;
+            
+            &:hover,
+            &:focus {
+                opacity: .6;
+            }
+        }
+        
+        .circle {
+            width: @circle-center-size;
+            height: @circle-center-size;
+            border-radius: 100%;
+            border: @line-width solid @blue;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -(@circle-center-size/2);
+            margin-left: -(@circle-center-size/2);
+        }
+        
+        .table {
+            width: @table-width;
+            height: @table-height;
+            margin-top: -(@table-height / 2);			
+            margin-left: -(@table-width / 2);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: @table-border solid @black;
+            border-radius: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="table">
+        <p class="message">Use keyboard arrows to control left player. <a href="https://codepen.io/allanpope/full/a01ddb29cbdecef58197c2e829993284/">Open in fullscreen</a>.</p>
+        <div class="table-inner">
+            <span class="table__goal-crease circle"></span>
+            <span class="table__faceoff table__faceoff--top-left circle"></span>
+            <span class="table__faceoff table__faceoff--bottom-left circle"></span>
+            <span class="table__blue-line"></span>
+            <span class="table__center-line"></span>
+            <span class="circle"></span>
+            <span class="table__blue-line table__blue-line--two"></span>
+            <span class="table__faceoff table__faceoff--top-right circle"></span>
+            <span class="table__faceoff table__faceoff--bottom-right circle"></span>
+            <span class="table__goal-crease table__goal-crease--two circle"></span>
+        </div>
+    </div>
+    <canvas id="canvas" class="table table--canvas" tabindex="0"></canvas>
+
+    <script>
+        var board = document.getElementById("canvas"),
+            boardContext = board.getContext('2d'),
+            boardWidth = 770,
+            boardHeight = 520,
+            boardCenterX = boardWidth / 2,
+            boardCenterY = boardHeight / 2,
+            controllers = [],
+            goal = document.getElementsByClassName('table__goal-crease'),
+            goalHeight = goal[0].clientHeight,
+            goalPosTop = (boardHeight - goalHeight) / 2,
+            score = [];
+
+        // Set width & height for canvas
+        board.width = boardWidth;
+        board.height = boardHeight;
+
+        // Set focus to canvas so keyboard events work
+        board.focus();
+
+        // Disc constructor function (add the provided JavaScript for the Disc here)
+        function Disc() {
+            // Disc properties and methods
+            // ...
+        }
+
+        // Define the updateGame function for the game loop (add the game loop code here)
+        function updateGame() {
+            // Implement your game loop logic here
+            boardContext.clearRect(0, 0, board.width, board.height);
+
+            // Update and render controllers and other game elements
+
+            // Check for collisions and game events
+
+            // Handle player input and update controller positions
+
+            // Check for scoring and game over conditions
+
+            // Implement animation and physics calculations
+
+            // Continue the game loop by using requestAnimationFrame
+            requestAnimationFrame(updateGame);
+        }
+
+        // Start the game loop
+        updateGame();
+
+        // ... (continue with your specific feature implementations)
+    </script>
+</body>
+</html>
