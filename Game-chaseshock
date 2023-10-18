@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi-Touch Air Hockey</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        canvas {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="400" height="600"></canvas>
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const puck = { x: canvas.width / 2, y: canvas.height / 2, radius: 10, dx: 3, dy: 3 };
+        const player1 = { x: 100, y: canvas.height - 20, width: 100, height: 10, speed: 5 };
+        let isPlayer1MovingLeft = false;
+        let isPlayer1MovingRight = false;
 
+        function drawPuck() {
+            ctx.beginPath();
+            ctx.arc(puck.x, puck.y, puck.radius, 0, Math.PI * 2);
+            ctx.fillStyle = "#000";
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        function drawPlayer1() {
+            ctx.fillStyle = "#00f";
+            ctx.fillRect(player1.x, player1.y, player1.width, player1.height);
+        }
+
+        function update() {
+            // Update puck position
+            puck.x += puck.dx;
+            puck.y += puck.dy;
+
+            // Detect puck collisions with walls
+            if (puck.x - puck.radius < 0 || puck.x + puck.radius > canvas.width) {
+                puck.dx = -puck.dx;
+            }
+
+            // Detect puck collision with player 1
+            if (
+                puck.y - puck.radius < player1.y + player1.height &&
+                puck.x > player1.x &&
+                puck.x < player1.x + player1.width
+            ) {
+                puck.dy = -puck.dy;
+            }
+
+            // Check for game over
+            if (puck.y + puck.radius > canvas.height) {
+                alert("Game Over!");
+                document.location.reload();
+            }
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawPuck();
+            drawPlayer1();
+            update();
+            requestAnimationFrame(draw);
+        }
+
+        // Multi-touch controls for player 1
+        canvas.addEventListener('touchstart', (e) => {
+            const touchX = e.changedTouches[0].pageX;
+            isPlayer1MovingLeft = touchX < canvas.width / 2;
+            isPlayer1MovingRight = touchX >= canvas.width / 2;
+        });
+
+        canvas.addEventListener('touchend', () => {
+            isPlayer1MovingLeft = false;
+            isPlayer1MovingRight = false;
+        });
+
+        function movePlayer1() {
+            if (isPlayer1MovingLeft && player1.x > 0) {
+                player1.x -= player1.speed;
+            }
+            if (isPlayer1MovingRight && player1.x + player1.width < canvas.width) {
+                player1.x += player1.speed;
+            }
+        }
+
+        // Game loop
+        setInterval(movePlayer1, 10);
+        draw();
+    </script>
+</body>
+</html>
